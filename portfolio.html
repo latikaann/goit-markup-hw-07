@@ -19,27 +19,29 @@
 
 <body>
    <!-- Header -->
-   <header class="header-section">
-      <div class="container nav-section">
+   <header class="header">
+      <div class="container header__container">
 
-         <nav class="main-nav">
-            <a class="logo" href="./index.html" lang="en"><span class="first-logo">Web</span><span
-                  class="second-logo">Studio</span></a>
-            <ul class="nav-list">
-               <li class="item"><a class="header-list nav-link" href="./index.html">Студія</a></li>
-               <li class="item"><a class="header-list nav-link current" href="./portfolio.html">Портфоліо</a></li>
-               <li class="item"><a class="header-list nav-link" href="">Контакти</a></li>
+         <nav class="site-nav">
+            <a class="logo" href="./index.html" lang="en"><span class="logo__first-part">Web</span><span
+                  class="logo__second-part">Studio</span></a>
+            <ul class="site-nav__list">
+               <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Студія</a>
+               </li>
+               <li class="site-nav__item"><a class="site-nav__link  site-nav__link--current"
+                     href="./portfolio.html">Портфоліо</a></li>
+               <li class="site-nav__item"><a class="site-nav__link" href="">Контакти</a></li>
             </ul>
          </nav>
 
-         <ul class="nav-list main-nav">
-            <li class="item"><a class="header-list nav-contacts" href="mailto:info@devstudio.com">
-                  <svg class="nav-icon" width="16" height="12">
+         <ul class="contacts">
+            <li><a class="contacts__link" href="mailto:info@devstudio.com">
+                  <svg class="contacts__icon" width="16" height="12">
                      <use href="./images/icons.svg#icon-envelope"></use>
                   </svg> info@devstudio.com</a>
             </li>
-            <li class="item"><a class="header-list nav-contacts" href="tel:+380961111111">
-                  <svg class="nav-icon" width="10" height="16">
+            <li><a class="contacts__link" href="tel:+380961111111">
+                  <svg class="contacts__icon" width="10" height="16">
                      <use href="./images/icons.svg#icon-phone"></use>
                   </svg> +38 096 111 11 11</a></li>
          </ul>
@@ -47,34 +49,34 @@
       </div>
    </header>
    <main>
-      <section>
+      <section class="portfolio">
          <div class="container">
 
             <!-- Portfolio -->
 
-            <h1 class="visually-hidden">Портфоліо</h1>
+            <h1 class="portfolio__hidden">Портфоліо</h1>
 
             <!-- Buttons  -->
 
-            <ul class="portfolio-buttons">
-               <li class="item"><button class="portfolio-button" type="button">Усі</button></li>
-               <li class="item"><button class="portfolio-button" type="button">Веб-сайти</button></li>
-               <li class="item"><button class="portfolio-button" type="button">Додатки</button></li>
-               <li class="item"><button class="portfolio-button" type="button">Дизайн</button></li>
-               <li class="item"><button class="portfolio-button" type="button">Маркетинг</button></li>
+            <ul class="portfolio__buttons">
+               <li><button class="portfolio__button" type="button">Усі</button></li>
+               <li><button class="portfolio__button" type="button">Веб-сайти</button></li>
+               <li><button class="portfolio__button" type="button">Додатки</button></li>
+               <li><button class="portfolio__button" type="button">Дизайн</button></li>
+               <li><button class="portfolio__button" type="button">Маркетинг</button></li>
             </ul>
 
             <!-- Portfolio-Cards -->
 
-            <ul class="portfolio-cards">
-               <li class="pf-card">
-                  <a class="pf-links" href="#">
+            <ul class="portfolio__list">
+               <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">
 
-                     <div class="pf-thumb">
+                     <div class="card-thumb">
                         <img src="./images/tehnokryak.jpg" alt="Технокряк" width="370">
 
                         <div class="overlay">
-                           <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                           <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                               та
                               сервісів. Все це
                               дозволить відвідувачу отримати
@@ -82,22 +84,22 @@
                         </div>
                      </div>
 
-                     <div class="pf-card-text">
-                        <h2 class="project-title">Технокряк</h2>
-                        <p class="project-caption">Веб-сайт</p>
+                     <div class="portfolio__text">
+                        <h2 class="portfolio__title">Технокряк</h2>
+                        <p class="portfolio__caption">Веб-сайт</p>
                      </div>
 
                   </a>
                </li>
 
-               <li class="pf-card">
-                  <a class="pf-links" href="#">
+               <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">
 
-                     <div class="pf-thumb">
+                     <div class="card-thumb">
                         <img src="./images/poster.jpg" alt="Гравці баскетболу" width="370">
 
                         <div class="overlay">
-                           <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                           <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                               та
                               сервісів. Все це
                               дозволить відвідувачу отримати
@@ -105,22 +107,22 @@
                         </div>
                      </div>
 
-                     <div class="pf-card-text">
-                        <h2 class="project-title">Постер New Orlean vs Golden Star</h2>
-                        <p class="project-caption">Дизайн</p>
+                     <div class="portfolio__text">
+                        <h2 class="portfolio__title">Постер New Orlean vs Golden Star</h2>
+                        <p class="portfolio__caption">Дизайн</p>
                      </div>
 
                   </a>
                </li>
 
-               <li class="pf-card">
-                  <a class="pf-links" href="#">
+               <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">
 
-                     <div class="pf-thumb">
+                     <div class="card-thumb">
                         <img src="./images/seafood.jpg" alt="Лого ресторану" width="370">
 
                         <div class="overlay">
-                           <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                           <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                               та
                               сервісів. Все це
                               дозволить відвідувачу отримати
@@ -128,22 +130,22 @@
                         </div>
                      </div>
 
-                     <div class="pf-card-text">
-                        <h2 class="project-title">Ресторан Seafood</h2>
-                        <p class="project-caption">Додаток</p>
+                     <div class="portfolio__text">
+                        <h2 class="portfolio__title">Ресторан Seafood</h2>
+                        <p class="portfolio__caption">Додаток</p>
                      </div>
 
                   </a>
                </li>
 
-               <li class="pf-card">
-                  <a class="pf-links" href="#">
+               <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">
 
-                     <div class="pf-thumb">
+                     <div class="card-thumb">
                         <img src="./images/prime.jpg" alt="Навушники" width="370">
 
                         <div class="overlay">
-                           <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                           <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                               та
                               сервісів. Все це
                               дозволить відвідувачу отримати
@@ -151,22 +153,22 @@
                         </div>
                      </div>
 
-                     <div class="pf-card-text">
-                        <h2 class="project-title">Проєкт Prime</h2>
-                        <p class="project-caption">Маркетинг</p>
+                     <div class="portfolio__text">
+                        <h2 class="portfolio__title">Проєкт Prime</h2>
+                        <p class="portfolio__caption">Маркетинг</p>
                      </div>
 
                   </a>
                </li>
 
-               <li class="pf-card">
-                  <a class="pf-links" href="#">
+               <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">
 
-                     <div class="pf-thumb">
+                     <div class="card-thumb">
                         <img src="./images/boxes.jpg" alt="Коробки" width="370">
 
                         <div class="overlay">
-                           <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                           <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                               та
                               сервісів. Все це
                               дозволить відвідувачу отримати
@@ -174,22 +176,22 @@
                         </div>
                      </div>
 
-                     <div class="pf-card-text">
-                        <h2 class="project-title">Проєкт Boxes</h2>
-                        <p class="project-caption">Додаток</p>
+                     <div class="portfolio__text">
+                        <h2 class="portfolio__title">Проєкт Boxes</h2>
+                        <p class="portfolio__caption">Додаток</p>
                      </div>
 
                   </a>
                </li>
 
-               <li class="pf-card">
-                  <a class="pf-links" href="#">
+               <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">
 
-                     <div class="pf-thumb">
+                     <div class="card-thumb">
                         <img src="./images/noborders.jpg" alt="Монітор" width="370">
 
                         <div class="overlay">
-                           <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                           <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                               та
                               сервісів. Все це
                               дозволить відвідувачу отримати
@@ -197,22 +199,22 @@
                         </div>
                      </div>
 
-                     <div class="pf-card-text">
-                        <h2 class="project-title">Inspiration has no Borders</h2>
-                        <p class="project-caption">Веб-сайт</p>
+                     <div class="portfolio__text">
+                        <h2 class="portfolio__title">Inspiration has no Borders</h2>
+                        <p class="portfolio__caption">Веб-сайт</p>
                      </div>
 
                   </a>
                </li>
 
-               <li class="pf-card">
-                  <a class="pf-links" href="#">
+               <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">
 
-                     <div class="pf-thumb">
+                     <div class="card-thumb">
                         <img src="./images/limitededition.jpg" alt="Книга" width="370">
 
                         <div class="overlay">
-                           <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                           <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                               та
                               сервісів. Все це
                               дозволить відвідувачу отримати
@@ -220,22 +222,22 @@
                         </div>
                      </div>
 
-                     <div class="pf-card-text">
-                        <h2 class="project-title">Видання Limited Edition</h2>
-                        <p class="project-caption">Дизайн</p>
+                     <div class="portfolio__text">
+                        <h2 class="portfolio__title">Видання Limited Edition</h2>
+                        <p class="portfolio__caption">Дизайн</p>
                      </div>
 
                   </a>
                </li>
 
-               <li class="pf-card">
-                  <a class="pf-links" href="#">
+               <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">
 
-                     <div class="pf-thumb">
+                     <div class="card-thumb">
                         <img src="./images/lab.jpg" alt="Бірка" width="370">
 
                         <div class="overlay">
-                           <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                           <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                               та
                               сервісів. Все це
                               дозволить відвідувачу отримати
@@ -244,22 +246,22 @@
                      </div>
 
 
-                     <div class="pf-card-text">
-                        <h2 class="project-title">Проєкт LAB</h2>
-                        <p class="project-caption">Маркетинг</p>
+                     <div class="portfolio__text">
+                        <h2 class="portfolio__title">Проєкт LAB</h2>
+                        <p class="portfolio__caption">Маркетинг</p>
                      </div>
 
                   </a>
                </li>
 
-               <li class="pf-card">
-                  <a class="pf-links" href="#">
+               <li class="portfolio__item">
+                  <a class="portfolio__link" href="#">
 
-                     <div class="pf-thumb">
+                     <div class="card-thumb">
                         <img src="./images/growingbusiness.jpg" alt="Ноутбук" width="370">
 
                         <div class="overlay">
-                           <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
+                           <p class="overlay__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу
                               та
                               сервісів. Все це
                               дозволить відвідувачу отримати
@@ -268,9 +270,9 @@
 
                      </div>
 
-                     <div class="pf-card-text">
-                        <h2 class="project-title">Growing Business</h2>
-                        <p class="project-caption">Додаток</p>
+                     <div class="portfolio__text">
+                        <h2 class="portfolio__title">Growing Business</h2>
+                        <p class="portfolio__caption">Додаток</p>
                      </div>
 
                   </a>
@@ -282,23 +284,25 @@
    </main>
 
    <!-- Футер -->
-   <footer class="footer-section">
+   <footer class="footer">
       <div class="container footer-blocks">
-         <div class="first-footer-block">
-            <a class="logo-footer" href="./index.html" lang="en"><span class="first-logo">Web</span><span
-                  class="third-logo">Studio</span></a>
-            <address class="adress-list">
+         <div class="footer__first-block">
+            <a class="logo" href="./index.html" lang="en"><span class="logo__first-part">Web</span><span
+                  class="logo__third-part">Studio</span></a>
+            <address class="footer__adress-list">
                <ul>
 
-                  <li class="item">
-                     <a class="adress-link" href="https://goo.gl/maps/v7Aq9cfspmDYKa2J8" target="_blank"
+                  <li>
+                     <a class="footer__adress-link" href="https://goo.gl/maps/v7Aq9cfspmDYKa2J8" target="_blank"
                         rel="noreferrer noopener">м.
                         Київ, пр-т Лесі
                         Українки, 26</a>
                   </li>
 
-                  <li class="item"><a class="footer-list" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                  <li class="item"><a class="footer-list" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                  <li class="footer__list"><a class="footer__link"
+                        href="mailto:info@devstudio.com">info@devstudio.com</a>
+                  </li>
+                  <li class="footer__list"><a class="footer__link" href="tel:+380961111111">+38 096 111 11 11</a></li>
 
                </ul>
 
@@ -308,29 +312,29 @@
 
 
          <div>
-            <p class="networks-text">приєднуйтесь</p>
-            <ul class="footer-links">
+            <p class="footer__text">приєднуйтесь</p>
+            <ul class="footer__socials">
 
                <li>
-                  <a class="footer-network-link" href=""><svg class="social-network">
+                  <a class="footer__socials-link" href=""><svg class="socials-icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                      </svg></a>
                </li>
 
                <li>
-                  <a class="footer-network-link" href=""><svg class="social-network">
+                  <a class="footer__socials-link" href=""><svg class="socials-icon">
                         <use href="./images/icons.svg#icon-twitter"></use>
                      </svg></a>
                </li>
 
                <li>
-                  <a class="footer-network-link" href=""><svg class="social-network">
+                  <a class="footer__socials-link" href=""><svg class="socials-icon">
                         <use href="./images/icons.svg#icon-facebook"></use>
                      </svg></a>
                </li>
 
                <li>
-                  <a class="footer-network-link" href=""><svg class="social-network">
+                  <a class="footer__socials-link" href=""><svg class="socials-icon">
                         <use href="./images/icons.svg#icon-linkedin"></use>
                      </svg></a>
                </li>
@@ -338,17 +342,17 @@
             </ul>
          </div>
 
-         <div class="footer-label">
+         <div class="footer__label">
 
-            <p class="networks-text">Підпишіться на розсилку</p>
+            <p class="footer__text">Підпишіться на розсилку</p>
 
-            <form class="footer-form">
+            <form class="footer__form">
                <label>
                   <input type="email" name="email" placeholder="E-mail" />
                </label>
 
-               <button class="footer-btn btn" type="submit">Підписатися
-                  <svg class="icon-send" width="24" height="24">
+               <button class="footer__btn btn" type="submit">Підписатися
+                  <svg class="footer__btn-icon" width="24" height="24">
                      <use href="./images/icons.svg#icon-send"></use>
                   </svg>
                </button>

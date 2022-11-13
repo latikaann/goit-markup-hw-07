@@ -80,6 +80,35 @@ section {
    padding-top: 94px;
    padding-bottom: 94px;
 }
+
+.work__title,
+.team__title,
+.clients__title {
+   margin-bottom: 50px;
+
+   font-weight: 700;
+   font-size: 36px;
+   line-height: 1.16;
+   text-align: center;
+   letter-spacing: 0.03em;
+
+   color: var(--title-text-color);
+}
+
+.features--hidden,
+.portfolio__hidden {
+   position: absolute;
+   white-space: nowrap;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   clip-path: inset(50%);
+   margin: -1px;
+}
+
 /* ---------------------- Button ---------------------------- */
 
 .btn {
@@ -101,14 +130,20 @@ section {
 
 }
 
+.btn:hover, 
+.btn:focus {
+   background-color: var(--button-focus);
+}
+
+
 /* -------------------------- Header --------------------- */
 
-.header-section {
+.header {
    border-bottom: 1px solid #ECECEC;
 }
 
 
-.nav-section {
+.header__container {
    display: flex;
    justify-content: space-between;
    
@@ -116,7 +151,7 @@ section {
 
 /* ================== Logo ======================*/
 
-.logo, .logo-footer {
+.logo {
    font-family: 'Raleway';
    font-style: normal;
    font-weight: 700;
@@ -129,42 +164,42 @@ section {
    margin-right: 90px;
 }
 
-.first-logo {
+.logo__first-part {
    color: var(--accent-color);
 }
 
-.second-logo {
+.logo__second-part {
    color: var(--black-color);
 }
 
-.third-logo {
+.logo__third-part {
    color: var(--white-color);
 }
 
 /* ------------------------ Navigation ------------------------*/
 
-.header-list {
+.site-nav__link,
+.contacts__link {
    font-weight: 500;
    font-size: 14px;
    line-height: 1.14;
    letter-spacing: 0.02em;
 }
 
-.main-nav {
+.site-nav, .contacts {
    display: flex;
    align-items: center;
 }
 
-.nav-list {
+.site-nav__list {
    display: flex;
 }
 
-.nav-list .item + .item {
+.site-nav__item:not(:first-child) {
    margin-left: 50px;
 }
 
-
-.nav-link {
+.site-nav__link {
    position: relative;
    display: block;
    padding: 32px 0;
@@ -175,19 +210,19 @@ section {
 
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
    color: var(--accent-color);
 
 }
 
-.nav-link.current {
+.site-nav__link--current {
    color: var(--accent-color);
 
       /* outline: 2px solid red; */
 }
 
-.current::after {
+.site-nav__link--current::after {
    content: '';
 
    position: absolute;
@@ -202,8 +237,11 @@ section {
    
 }
 
+.contacts {
+   gap: 30px;
+}
 
-.nav-contacts {
+.contacts__link {
    display: flex;
    align-items: center;
    padding: 32px 0;
@@ -214,16 +252,16 @@ section {
    
 }
 
-.nav-contacts:hover, 
-.nav-contacts:focus,
-.nav-icon:hover,
-.nav-icon:focus{
+.contacts__link:hover, 
+.contacts__link:focus,
+.contacts__icon:hover,
+.contacts__icon:focus{
    color: var(--accent-color);
    fill: var(--accent-color);
 
 }
 
-.nav-icon {
+.contacts__icon {
    margin-right: 10px;
    fill: currentColor;
 
@@ -233,7 +271,7 @@ section {
 
 /* ------------------------ HERO ------------------------------- */
 
-.hero-section {
+.hero {
    padding: 200px 0;
    margin: auto;
    max-width: 1600px;
@@ -247,7 +285,7 @@ section {
    background-color: var(--hero-bg);
 }
 
-.hero-title {
+.hero__title {
    margin-top: 0;
    margin-bottom: 30px;
    margin-left: auto;
@@ -265,39 +303,23 @@ section {
    
 }
 
-.button {
+.hero__btn {
    min-width: 216px;
    padding: 10px 32px;
-   
-   
+    
 }
 
-
-.button:focus,
-.button:hover,
-.footer-btn:hover,
-.footer-btn:focus {
-   background-color: var(--button-focus);
-
-}
 
 
 /* < !-------------------- Особливості ----------------------> */
 
-.visually-hidden {
-   position: absolute;
-   white-space: nowrap;
-   width: 1px;
-   height: 1px;
-   overflow: hidden;
-   border: 0;
-   padding: 0;
-   clip: rect(0 0 0 0);
-   clip-path: inset(50%);
-   margin: -1px;
+
+.features__list {
+   display: flex;
+   gap: 30px;
 }
 
-.feature-list-icons {
+.feature__icon {
    width: 270px;
    height: 120px;
    padding: 25px 100px;
@@ -307,20 +329,8 @@ section {
    background-color: var(--secondary-bg-color);
 }
 
-.features-lists {
-   display: flex;
-   
-}
 
-.features-icon {
-   width: 70px;
-   height: 70px;
-   fill: currentColor;
-}
-
-
-
-.features-title {
+.features__title {
    margin-top: 0;
    margin-bottom: 10px;
    width: 270px;
@@ -335,7 +345,7 @@ section {
 }
 
 
-.features-text {
+.features__text {
    width: 270px;
 
    font-size: 14px;
@@ -344,40 +354,25 @@ section {
 
 }
 
-.features-lists .list + .list {
-   margin-left: 30px;
-}
 
-.work-title, 
-.team-title,
-.clients-title {
-   margin-bottom: 50px;
-
-   font-weight: 700;
-   font-size: 36px;
-   line-height: 1.16;
-   text-align: center;
-   letter-spacing: 0.03em;
-
-   color: var(--title-text-color);
-}
 
 /* ---------------------Чим ми займаємося--------------------- */
 
-.work-section {
+.work {
    padding-top: 0;
 }
 
 
-.work-cards {
+.work__list {
    display: flex;
+   gap: 30px;
 }
 
-.card {
+.work__item {
    position: relative;
 }
 
-.work-subtitle {
+.work__subtitle {
    position: absolute;
    bottom: 0;
 
@@ -397,26 +392,23 @@ section {
    background-color:rgba(47, 48, 58, 0.8);
 }
 
-.card:not(:last-child) {
-   margin-right: 30px;
-}
-
 
 /* -------------------------Наша команда--------------------- */
 
 
 
-.team-section {
+.team {
    background-color: var(--secondary-bg-color);
 }
 
 
-.team-cards {
+.team__list {
    display: flex;
+   gap: 30px;
    
 }
 
-.team-card {
+.team__card {
    text-align: center;
 
    background-color: var(--white-color);
@@ -427,11 +419,8 @@ section {
 }
 
 
-.team-card:not(:last-child) {
-   margin-right: 30px;
-}
 
-.text-about {
+.team__subtitle {
    
    margin-bottom: 10px;
 
@@ -443,7 +432,7 @@ section {
    color: var(--title-text-color);
 }
 
-.team-text {
+.team__text {
    margin-bottom: 16px;
 
    font-size: 16px;
@@ -451,11 +440,11 @@ section {
    letter-spacing: 0.03em;
 }
 
-.team-text-box {
+.team__text-box {
    padding: 30px 0;
 }
 
-.network-list {
+.team__socials {
    display: flex;
    justify-content: center;
    gap: 10px;
@@ -465,14 +454,14 @@ section {
    
 }
 
-.social-network { 
+.socials-icon { 
    width: 20px;
    height: 20px;
 
    /* outline: 2px solid blue; */
 }
 
-.network-link {
+.socials-link {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -489,10 +478,10 @@ section {
 }
 
 
-.network-link:hover,
-.network-link:focus,
-.footer-network-link:hover,
-.footer-network-link:focus {
+.socials-link:hover,
+.socials-link:focus,
+.footer__socials-link:hover,
+.footer__socials-link:focus {
    fill: #FFFFFF;
    background-color: var(--accent-color);
 
@@ -501,14 +490,14 @@ section {
 
 /* ---------------------- Постійні клієнти----------------- */
 
-.clients-list {
+.clients__list {
    display: flex;
    justify-content: space-between;
 
    /* outline: 2px solid tomato; */
 }
 
-.clients-link {
+.clients__link {
    
    display: flex;
    align-items: center;
@@ -525,7 +514,7 @@ section {
    
 }
 
-.clients-icon {
+.clients__icon {
    width: 106px;
    height: 60px;
 
@@ -533,8 +522,8 @@ section {
 
 }
 
-.clients-link:hover, 
-.clients-link:focus {
+.clients__link:hover, 
+.clients__link:focus {
    color: var(--accent-color);
    border-color: var(--accent-color);
 
@@ -546,7 +535,7 @@ section {
 
 
 
-.footer-section {
+.footer {
    height: 252px;
    padding-top: 60px;
    padding-bottom: 60px;
@@ -555,7 +544,7 @@ section {
 }
 
 
-.adress-link {
+.footer__adress-link {
    font-style: normal;
    font-size: 14px;
    line-height: 1.71;     
@@ -566,13 +555,13 @@ section {
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.adress-link:hover, 
-.adress-link:focus {
+.footer__adress-link:hover, 
+.footer__adress-link:focus {
    color: var(--accent-color);
 
 }
 
-.footer-list {
+.footer__link {
    font-style: normal;
    font-size: 14px;
    line-height: 1.71;
@@ -583,22 +572,22 @@ section {
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.adress-list {
+.footer__adress-list {
    margin-top: 20px;
 }
 
-.footer-list:hover, 
-.footer-list:focus {
+.footer__link:hover, 
+.footer__link:focus {
    color: var(--accent-color);
 
 }
 
 
-.adress-list .item + .item {
+.footer__list:not(:first-child) {
    margin-top: 9px;
 }
 
-.networks-text {
+.footer__text {
    margin-bottom: 20px;
    font-weight: 700;
    font-size: 14px;
@@ -609,7 +598,7 @@ section {
    color: var(--white-color);
 }
 
-.footer-network-link {
+.footer__socials-link {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -628,20 +617,20 @@ section {
    align-items: baseline;
 }
 
-.first-footer-block {
+.footer__first-block {
    margin-right: 70px;
 }
 
-.footer-links {
+.footer__socials {
    display: flex;
    gap: 10px;
 }
 
-.footer-label {
+.footer__label {
    margin-left: 93px;
 }
 
-.footer-btn {
+.footer__btn {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -652,12 +641,12 @@ section {
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-form {
+.footer__form {
    display: flex;
    align-items: center;
 }
 
-.footer-label input {
+.footer__label input {
    margin-right: 12px;
    padding-left: 16px;
    width: 358px;
@@ -669,32 +658,34 @@ section {
    background-color: var(--dark-bg-color)
 }
 
-.footer-label input:hover,
-.footer-label input:focus {
+.footer__label input:hover,
+.footer__label input:focus {
 
    outline-color: var(--accent-color);
    border-color: var(--accent-color);
    
 }
 
-.footer-label input::placeholder {
+.footer__label input::placeholder {
    color: var(--adress-color);
 }
 
-.icon-send {
+.footer__btn-icon {
    fill: var(--white-color);
 }
 
 /* -------------------- Portfolio  ------------------*/
 
-.portfolio-buttons {
+.portfolio__buttons {
    display: flex;
    justify-content: center;
+   align-items: center;
+   gap: 8px;
    margin-bottom: 50px;
   
 }
 
-.portfolio-button {
+.portfolio__button {
    padding: 6px 22px;
    cursor: pointer;
    border-radius: 4px;
@@ -715,19 +706,16 @@ section {
     
 }
 
-.portfolio-buttons > .item:not(:first-child) {
-   margin-left: 8px;
-}
 
-.portfolio-button:hover,
-.portfolio-button:focus {
+.portfolio__button:hover,
+.portfolio__button:focus {
    background-color: var(--accent-color);
    color: var(--white-color);
    box-shadow: var(--button-shadow);
 
 }
 
-.project-title {
+.portfolio__title {
    margin-bottom: 4px;
    font-weight: 700;
    font-size: 18px;
@@ -737,7 +725,7 @@ section {
    color: var(--title-text-color);
 }
 
-.project-caption {
+.portfolio__caption {
    
    font-size: 16px;
    line-height: 1.88;
@@ -747,29 +735,29 @@ section {
 }
 
 
-.pf-card {
+.portfolio__item {
    background: var(--white-color);
 }
 
-.pf-links {
+.portfolio__link {
    display: block;
 
    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.pf-links:hover,
-.pf-links:focus {
+.portfolio__link:hover,
+.portfolio__link:focus {
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
 
-.portfolio-cards {
+.portfolio__list {
    display: flex;
    flex-wrap: wrap;
    gap: 30px;
 }
 
-.pf-card-text {
+.portfolio__text {
    padding: 20px 24px;
 
    border-right: 1px solid #EEEEEE;
@@ -778,13 +766,13 @@ section {
 }
 
 
-.pf-thumb {
+.card-thumb {
    position: relative;
    overflow: hidden;
 }
 
-.pf-links:hover .overlay,
-.pf-links:focus .overlay {
+.portfolio__link:hover .overlay,
+.portfolio__link:focus .overlay {
    transform: translateY(0);
 
 }
@@ -802,7 +790,7 @@ section {
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay-text {
+.overlay__text {
    padding: 63px 24px;
    font-size: 18px;
    line-height: 1.56;
@@ -855,7 +843,7 @@ section {
 
 }
 
-.modal-button {
+.modal__close-button {
    position: absolute;
    top: 8px;
    right: 8px;
@@ -877,14 +865,14 @@ section {
 
 }
 
-.modal-button:hover,
-.modal-button:focus {
+.modal__close-button:hover,
+.modal__close-button:focus {
    fill: var(--accent-color);
 
 }
 
 
-.form-button {
+.form__btn {
    display: block;
    padding: 10px 52px;
    min-width: 200px;
@@ -894,10 +882,6 @@ section {
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-button:hover, 
-.form-button:focus {
-   background-color: var(--button-focus);
-}
 
 .form {
    
@@ -909,7 +893,7 @@ section {
 }
 
 
-.form-text {
+.modal__text {
    margin-bottom: 12px;
    font-weight: 700;
    font-size: 20px;
@@ -920,7 +904,7 @@ section {
    color: var(--title-text-color);
 }
 
-.form-field {
+.form__field {
    /* outline: 1px solid tomato; */
   
    font-size: 12px;
@@ -929,14 +913,14 @@ section {
    margin-bottom: 10px;
 }
 
-.comment-field {
+.form__comment {
    font-size: 12px;
    line-height: 1.16;
    letter-spacing: 0.01em;
 
 }
 
-.label {
+.form__label {
 
    position: relative;
    display: flex;
@@ -959,7 +943,7 @@ textarea {
 }
 
 
-.form-icon {
+.form__icon {
    position: absolute;
 
    bottom: 11px;
@@ -968,7 +952,7 @@ textarea {
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field input {
+.form__field input {
    margin-top: 4px;
    padding-left: 42px;
    border: 1px solid rgba(33, 33, 33, 0.2);
@@ -979,9 +963,9 @@ textarea {
 }
 
 label:hover,
-.form-field input:hover,
-.form-field input:focus,
-.form-field input:focus + .form-icon,
+.form__field input:hover,
+.form__field input:focus,
+.form__field input:focus + .form__icon,
 textarea:hover,
 textarea:focus {
    border-color: var(--accent-color);
@@ -989,8 +973,13 @@ textarea:focus {
    outline-color: var(--accent-color);
 }
 
+
+.form__comment textarea::placeholder {
+   color: rgba(117, 117, 117, 0.5);
+}
+
 .check {
-   
+
    display: flex;
    align-items: center;
    justify-content: center;
@@ -1001,7 +990,7 @@ textarea:focus {
 }
 
 
-.check > input {
+.check>input {
 
    position: absolute;
    width: 1px;
@@ -1014,8 +1003,9 @@ textarea:focus {
 }
 
 
-.chek-text, .chek-link {
-   
+.chek__text,
+.chek__link {
+
    font-size: 14px;
    line-height: 1.71;
    letter-spacing: 0.03em;
@@ -1023,17 +1013,13 @@ textarea:focus {
    color: var(--primary-text-color);
 }
 
-.chek-link {
+.chek__link {
    margin-left: 2px;
    color: var(--accent-color);
    text-decoration: underline;
 }
 
-.comment-field textarea::placeholder {
-   color: rgba(117, 117, 117, 0.5);
-}
-
-.icon-check {
+.icon__check {
    display: block;
    width: 16px;
    height: 15px;
@@ -1047,7 +1033,7 @@ textarea:focus {
    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.check-box:checked + .icon-check {
+.check__box:checked + .icon__check {
    background-color: var(--accent-color);
    border-color: transparent;
  }

@@ -69,8 +69,12 @@
    &:focus {
       box-shadow: $poftfolio-cards-shadow;
    }
-}
 
+   &:hover .overlay,
+   &:focus .overlay {
+      transform: translateY(0);
+   }
+}
 
 
 .portfolio__list {
@@ -91,12 +95,6 @@
 .card-thumb {
    position: relative;
    overflow: hidden;
-}
-
-.portfolio__link:hover .overlay,
-.portfolio__link:focus .overlay {
-   transform: translateY(0);
-
 }
 
 .overlay {
